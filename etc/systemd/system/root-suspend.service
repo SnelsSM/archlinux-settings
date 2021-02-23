@@ -1,0 +1,10 @@
+[Unit]
+Description=Local system suspend actions
+Before=sleep.target
+
+[Service]
+Type=simple
+ExecStart=/bin/bash /usr/local/bin/suspend.sh
+
+[Install]
+WantedBy=sleep.target
